@@ -1,0 +1,138 @@
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+
+  --White-stats: hsl(0, 0%, 100%);
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Slightlym-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "inter", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+}
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--Slightly-transparent-white);
+}
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+.container {
+  background-color: var(--Dark-desaturated-blue);
+  margin: 50px 20px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--White-stats);
+}
+
+.card h1 span {
+  color: var(--Soft-violet);
+}
+.container .picture {
+  background: url(/images/image-header-mobile.jpg) no-repeat center/cover;
+  height: 400px;
+  border-radius: 10px 10px 0 0;
+}
+.container .card h1 {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  line-height: 1.2;
+  font-family: "lexend deca", sans-serif;
+}
+
+.container .card p {
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+.container .card ul li span {
+  text-transform: lowercase;
+  display: block;
+  font-weight: 700;
+  font-family: "lexend deca", sans-serif;
+  color: var(--White-stats);
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.container .card ul li {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--Slightly-transparent-white);
+  font-family: "inter", sans-serif;
+}
+
+.container .picture .overlay {
+  background-color: hsla(277, 64%, 61%, 0.5);
+  height: 400px;
+  border-radius: 10px 10px 0 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding: 0;
+    text-align: left;
+  }
+
+  .container .picture {
+    background: url(/images/image-header-desktop.jpg) no-repeat center/cover;
+    min-width: 50%;
+    border-radius: 0px 10px 10px 0px;
+  }
+  .container .card .overlay {
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .container .card ul {
+    padding-left: 20px;
+    display: flex;
+  }
+
+  .container .card ul li {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .container .card:nth-child(2) {
+    padding: 0 45px;
+  }
+}
